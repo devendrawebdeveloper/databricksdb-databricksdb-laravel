@@ -1,0 +1,36 @@
+{
+  "name": "databricksdb/databricksdb-laravel",
+  "description": "A DataBricksDB database driver for Laravel.",
+  "type": "library",
+  "license": "Apache-2.0",
+  "autoload": {
+    "psr-4": {
+      "DataBricks\\Laravel\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Devendra Sharma",
+      "email": "devendra.sharma@netscribes.com"
+    }
+  ],
+  "require": {
+    "php": "^7.3|^8.0",
+    "illuminate/container": "^8.0|^9.0",
+    "illuminate/database": "^8.0|^9.0",
+    "illuminate/events": "^8.0|^9.0",
+    "illuminate/support": "^8.0|^9.0"
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "DataBricks\\Laravel\\DataBricksProvider"
+      ]
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
