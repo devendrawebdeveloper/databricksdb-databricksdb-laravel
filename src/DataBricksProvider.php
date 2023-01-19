@@ -3,7 +3,7 @@
 namespace DataBricks\Laravel;
 
 use Illuminate\Support\ServiceProvider;
-use DataBricks\Laravel\Connect\DataBricksConnection;
+use DataBricks\Laravel\Connect\Connection;
 use DataBricks\Laravel\Connect\Connector;
 
 class DataBricksProvider extends ServiceProvider
@@ -13,8 +13,8 @@ class DataBricksProvider extends ServiceProvider
      */
     public function register(): void
     {
-        DataBricksConnection::resolverFor('databricks', function ($connection, $database, $prefix, $config) {
-            return new DataBricksConnection($connection, $database, $prefix, $config);
+        Connection::resolverFor('databricks', function ($connection, $database, $prefix, $config) {
+            return new Connection($connection, $database, $prefix, $config);
         });
     }
 
