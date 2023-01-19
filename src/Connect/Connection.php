@@ -2,14 +2,14 @@
 
 namespace DataBricks\Laravel\Connect;
 
-use Illuminate\Database\MySqlConnection;
+use Illuminate\Database\Connection;
 use DataBricks\Laravel\Query;
 use DataBricks\Laravel\QueryGrammar;
 use DataBricks\Laravel\Schema;
 use DataBricks\Laravel\SchemaBuilder;
 use DataBricks\Laravel\SchemaGrammar;
 
-class Connection extends MySqlConnection
+class DataBricksConnection extends Connection
 {
     /**
      * Get a schema builder instance for the connection.
